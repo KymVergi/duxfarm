@@ -1,0 +1,85 @@
+.nav {
+  background: var(--px-surface);
+  border-bottom: var(--px-gap);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--px-gold);
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--px-gold2);
+}
+
+.logoIcon {
+  width: 24px;
+  height: 24px;
+  image-rendering: pixelated;
+}
+
+.links {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  height: 100%;
+}
+
+.links li {
+  height: 100%;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 14px;
+  font-size: 7px;
+  color: var(--px-muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.1s, border-color 0.1s;
+}
+
+.links a:hover {
+  color: var(--px-text);
+  border-bottom-color: var(--px-border2);
+}
+
+.links a.active {
+  color: var(--px-gold);
+  border-bottom-color: var(--px-gold);
+}
+
+.walletBtn {
+  background: transparent;
+  border: 2px solid var(--px-purple);
+  color: var(--px-purple);
+  padding: 7px 12px;
+  font-size: 7px;
+}
+
+.walletBtn:hover {
+  background: var(--px-purple);
+  color: #fff;
+}
+
+.walletConnected {
+  border-color: var(--px-green);
+  color: var(--px-green);
+}
+
+.walletConnected:hover {
+  background: var(--px-green);
+  color: #000;
+}

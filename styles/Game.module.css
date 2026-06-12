@@ -1,0 +1,183 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--px-bg);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  flex: 1;
+}
+
+/* ── Canvas area ──────────────────────────────────────────────────────────── */
+.canvasWrapper {
+  display: flex;
+  flex-direction: column;
+  background: #08080f;
+  border-right: var(--px-gap);
+}
+
+.canvasHeader {
+  background: var(--px-surface);
+  border-bottom: var(--px-gap);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.canvasTitle {
+  font-size: 8px;
+  color: var(--px-gold);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.canvasMeta {
+  font-size: 6px;
+  color: var(--px-muted);
+}
+
+/* This div receives the Phaser canvas as a child */
+.canvas {
+  width: 100%;
+  height: 538px;          /* explicit height so Phaser has room */
+  min-height: 538px;
+  position: relative;
+  background: #0a0a0f;
+  overflow: hidden;
+}
+
+/* Phaser injects a <canvas> here — make it fill the container */
+.canvas canvas {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  image-rendering: pixelated;
+}
+
+.controls {
+  background: var(--px-surface2);
+  border-top: var(--px-gap);
+  padding: 8px 16px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.controlItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 6px;
+  color: var(--px-muted);
+}
+
+.key {
+  background: var(--px-surface);
+  border: 1px solid var(--px-border2);
+  color: var(--px-text);
+  font-size: 6px;
+  padding: 2px 5px;
+  font-family: var(--font-pixel);
+}
+
+/* ── Sidebar ──────────────────────────────────────────────────────────────── */
+.sidebar {
+  padding: 16px;
+  background: var(--px-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.sideTitle {
+  font-size: 7px;
+  color: var(--px-gold);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: var(--px-gap);
+}
+
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 6px;
+  margin-bottom: 8px;
+}
+
+.statRowLabel { color: var(--px-muted); }
+.statRowVal   { color: var(--px-text); }
+
+.connectBox {
+  background: var(--px-surface2);
+  border: 1px solid var(--px-border);
+  border-top: 2px solid var(--px-purple);
+  padding: 14px;
+  text-align: center;
+}
+
+.connectTitle {
+  font-size: 7px;
+  color: var(--px-purple);
+  margin-bottom: 8px;
+}
+
+.connectDesc {
+  font-size: 6px;
+  color: var(--px-muted);
+  line-height: 2.4;
+  margin-bottom: 12px;
+}
+
+.connectBtn {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  background: transparent;
+  border: 2px solid var(--px-purple);
+  color: var(--px-purple);
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.connectBtn:hover {
+  background: var(--px-purple);
+  color: #fff;
+}
+
+.tipBox {
+  background: var(--px-surface2);
+  border: 1px solid var(--px-border);
+  border-left: 2px solid var(--px-teal);
+  padding: 10px 12px;
+}
+
+.tipTitle {
+  font-size: 6px;
+  color: var(--px-teal);
+  margin-bottom: 6px;
+}
+
+.tipText {
+  font-size: 6px;
+  color: var(--px-muted);
+  line-height: 2.4;
+}
+
+.footer {
+  background: var(--px-surface);
+  border-top: var(--px-gap);
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.footerText { font-size: 6px; color: var(--px-muted); }

@@ -1,0 +1,387 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Page header ─────────────────────────────────────────────────────────── */
+.pageHeader {
+  background: var(--px-surface);
+  border-bottom: var(--px-gap);
+  padding: 28px 32px 20px;
+}
+
+.pageTitle {
+  font-size: 14px;
+  color: var(--px-gold);
+  text-shadow: 2px 2px 0 var(--px-gold2);
+  margin-bottom: 6px;
+}
+
+.pageSub {
+  font-size: 7px;
+  color: var(--px-muted);
+}
+
+/* ── Filters bar ─────────────────────────────────────────────────────────── */
+.filters {
+  background: var(--px-surface2);
+  border-bottom: var(--px-gap);
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  font-size: 6px;
+  color: var(--px-muted);
+  letter-spacing: 1px;
+}
+
+.filterGroup {
+  display: flex;
+  gap: 0;
+}
+
+.filterBtn {
+  background: transparent;
+  border: 1px solid var(--px-border2);
+  color: var(--px-muted);
+  padding: 6px 10px;
+  font-size: 7px;
+  border-right: none;
+}
+
+.filterBtn:last-child {
+  border-right: 1px solid var(--px-border2);
+}
+
+.filterBtn:hover {
+  color: var(--px-text);
+  background: var(--px-surface);
+}
+
+.filterBtnActive {
+  background: var(--px-surface);
+  color: var(--px-gold);
+  border-color: var(--px-gold2);
+}
+
+.searchBox {
+  background: var(--px-surface);
+  border: 1px solid var(--px-border2);
+  color: var(--px-text);
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  padding: 6px 10px;
+  outline: none;
+  width: 180px;
+}
+
+.searchBox::placeholder {
+  color: var(--px-hint);
+}
+
+.searchBox:focus {
+  border-color: var(--px-gold2);
+}
+
+/* ── Main layout ─────────────────────────────────────────────────────────── */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  flex: 1;
+  align-items: start;
+}
+
+/* ── Table panel ─────────────────────────────────────────────────────────── */
+.tablePanel {
+  padding: 24px 32px;
+  border-right: var(--px-gap);
+}
+
+/* ── Podium (top 3) ──────────────────────────────────────────────────────── */
+.podium {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.podiumCard {
+  background: var(--px-surface);
+  border: 2px solid var(--px-border);
+  padding: 14px 12px;
+  text-align: center;
+  position: relative;
+}
+
+.podiumCard.first {
+  border-color: var(--px-gold);
+  background: #0d0d00;
+  order: 0;
+}
+
+.podiumCard.second {
+  border-color: #888;
+  background: #101010;
+  order: -1;
+  margin-top: 20px;
+}
+
+.podiumCard.third {
+  border-color: var(--px-bronze);
+  background: #0d0800;
+  order: 1;
+  margin-top: 32px;
+}
+
+.podiumRank {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.podiumName {
+  font-size: 7px;
+  color: var(--px-text);
+  margin-bottom: 6px;
+}
+
+.podiumFarm {
+  font-size: 9px;
+  color: var(--px-gold);
+}
+
+.podiumBadge {
+  font-size: 6px;
+  padding: 3px 6px;
+  border: 1px solid;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.podiumLevel {
+  font-size: 6px;
+  color: var(--px-muted);
+  margin-top: 4px;
+}
+
+/* ── Full table ─────────────────────────────────────────────────────────── */
+.tableHeader {
+  font-size: 8px;
+  color: var(--px-gold);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: var(--px-gap);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 7px;
+}
+
+.table th {
+  text-align: left;
+  padding: 8px 10px;
+  font-size: 6px;
+  color: var(--px-muted);
+  border-bottom: var(--px-gap);
+  font-weight: 400;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.table th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.table th.sortable:hover {
+  color: var(--px-gold);
+}
+
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--px-border);
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover td {
+  background: var(--px-surface2);
+}
+
+.table tbody tr.highlight td {
+  background: #0d0d00;
+  border-left: 2px solid var(--px-gold);
+}
+
+/* rank cells */
+.rank1 { color: var(--px-gold); }
+.rank2 { color: var(--px-silver); }
+.rank3 { color: var(--px-bronze); }
+.rankN { color: var(--px-muted); }
+
+.badge {
+  display: inline-block;
+  font-size: 6px;
+  padding: 2px 5px;
+  border: 1px solid;
+}
+
+.badgeKnight { border-color: var(--px-gold);   color: var(--px-gold);   background: var(--px-gold-dim); }
+.badgeRogue  { border-color: var(--px-purple); color: var(--px-purple); background: var(--px-purple-dim); }
+.badgeWizard { border-color: var(--px-teal);   color: var(--px-teal);   background: var(--px-teal-dim); }
+
+.avatar {
+  width: 18px;
+  height: 18px;
+  image-rendering: pixelated;
+  background: var(--px-surface2);
+  border: 1px solid var(--px-border);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.streakHigh { color: var(--px-green); }
+.streakMid  { color: var(--px-gold); }
+.streakLow  { color: var(--px-muted); }
+
+.xpBar {
+  width: 60px;
+  height: 4px;
+  background: var(--px-border);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.xpFill {
+  height: 100%;
+  background: var(--px-teal);
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+.sidebar {
+  padding: 24px 20px;
+  background: var(--px-surface);
+}
+
+.sideTitle {
+  font-size: 8px;
+  color: var(--px-teal);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: var(--px-gap);
+}
+
+/* stat cards */
+.statCard {
+  background: var(--px-surface2);
+  border: 1px solid var(--px-border);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+
+.statCardLabel {
+  font-size: 6px;
+  color: var(--px-muted);
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.statCardVal {
+  font-size: 12px;
+}
+
+/* class breakdown */
+.classBreakdown {
+  margin-top: 20px;
+}
+
+.classRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 7px;
+}
+
+.classRowName {
+  width: 52px;
+  flex-shrink: 0;
+}
+
+.classBar {
+  flex: 1;
+  height: 6px;
+  background: var(--px-border);
+}
+
+.classBarFill {
+  height: 100%;
+}
+
+.classRowPct {
+  width: 32px;
+  text-align: right;
+  color: var(--px-muted);
+  font-size: 6px;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  gap: 6px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageBtn {
+  background: transparent;
+  border: 1px solid var(--px-border2);
+  color: var(--px-muted);
+  padding: 6px 10px;
+  font-size: 7px;
+  min-width: 32px;
+}
+
+.pageBtn:hover {
+  border-color: var(--px-gold2);
+  color: var(--px-gold);
+}
+
+.pageBtnActive {
+  border-color: var(--px-gold);
+  color: var(--px-gold);
+  background: var(--px-gold-dim);
+}
+
+.empty {
+  text-align: center;
+  color: var(--px-muted);
+  padding: 40px;
+  font-size: 8px;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+.footer {
+  background: var(--px-surface);
+  border-top: var(--px-gap);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerText {
+  font-size: 6px;
+  color: var(--px-muted);
+}

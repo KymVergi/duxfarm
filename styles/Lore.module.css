@@ -1,0 +1,263 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--px-bg);
+}
+
+/* ── Page header ─────────────────────────────────────────────────── */
+.pageHeader {
+  background: var(--px-surface);
+  border-bottom: var(--px-gap);
+  padding: 40px 40px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pageHeader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(240,192,64,0.02) 3px,
+    rgba(240,192,64,0.02) 4px
+  );
+  pointer-events: none;
+}
+
+.eyebrow {
+  font-size: 7px;
+  color: var(--px-teal);
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+}
+
+.pageTitle {
+  font-size: 20px;
+  color: var(--px-gold);
+  text-shadow: 3px 3px 0 var(--px-gold2), 6px 6px 0 #1a0e00;
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.pageSub {
+  font-size: 7px;
+  color: var(--px-muted);
+  line-height: 2.4;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ── Main layout ─────────────────────────────────────────────────── */
+.main {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  flex: 1;
+  align-items: start;
+}
+
+/* ── TOC sidebar ─────────────────────────────────────────────────── */
+.toc {
+  position: sticky;
+  top: 52px;
+  background: var(--px-surface);
+  border-right: var(--px-gap);
+  padding: 24px 16px;
+  min-height: calc(100vh - 52px);
+}
+
+.tocTitle {
+  font-size: 7px;
+  color: var(--px-gold);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: var(--px-gap);
+  letter-spacing: 2px;
+}
+
+.tocList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tocItem a {
+  display: block;
+  font-size: 6px;
+  color: var(--px-muted);
+  text-decoration: none;
+  padding: 6px 8px;
+  border-left: 2px solid transparent;
+  line-height: 1.8;
+  transition: color 0.1s, border-color 0.1s;
+}
+
+.tocItem a:hover {
+  color: var(--px-gold);
+  border-left-color: var(--px-gold);
+}
+
+/* ── Content ─────────────────────────────────────────────────────── */
+.content {
+  padding: 40px 48px;
+  max-width: 760px;
+}
+
+/* chapter */
+.chapter {
+  margin-bottom: 60px;
+}
+
+.chapterNum {
+  font-size: 6px;
+  color: var(--px-hint);
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.chapterTitle {
+  font-size: 13px;
+  color: var(--px-gold);
+  text-shadow: 2px 2px 0 var(--px-gold2);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--px-border);
+  line-height: 1.8;
+}
+
+.chapterTitle::before {
+  content: '▶ ';
+  color: var(--px-gold2);
+  font-size: 8px;
+}
+
+.para {
+  font-size: 7px;
+  color: var(--px-muted);
+  line-height: 3;
+  margin-bottom: 16px;
+  font-family: var(--font-pixel);
+}
+
+.para em {
+  color: var(--px-text);
+  font-style: normal;
+}
+
+.para strong {
+  color: var(--px-gold);
+  font-weight: 400;
+}
+
+/* pull quote */
+.pullQuote {
+  border-left: 3px solid var(--px-gold2);
+  padding: 14px 20px;
+  margin: 24px 0;
+  background: var(--px-surface);
+}
+
+.pullQuoteText {
+  font-size: 8px;
+  color: var(--px-silver);
+  line-height: 2.4;
+  margin-bottom: 6px;
+}
+
+.pullQuoteAttr {
+  font-size: 6px;
+  color: var(--px-hint);
+  letter-spacing: 1px;
+}
+
+/* faction cards */
+.factions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.factionCard {
+  background: var(--px-surface);
+  border: 1px solid var(--px-border);
+  border-top: 2px solid;
+  padding: 16px;
+}
+
+.factionCard:nth-child(1) { border-top-color: var(--px-gold); }
+.factionCard:nth-child(2) { border-top-color: var(--px-purple); }
+.factionCard:nth-child(3) { border-top-color: var(--px-teal); }
+.factionCard:nth-child(4) { border-top-color: var(--px-red); }
+
+.factionIcon { font-size: 20px; margin-bottom: 8px; }
+
+.factionName {
+  font-size: 8px;
+  color: var(--px-text);
+  margin-bottom: 6px;
+}
+
+.factionDesc {
+  font-size: 6px;
+  color: var(--px-muted);
+  line-height: 2.4;
+}
+
+/* locations */
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.locationRow {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px;
+  background: var(--px-surface);
+  border: 1px solid var(--px-border);
+  padding: 14px;
+  align-items: start;
+}
+
+.locationName {
+  font-size: 7px;
+  color: var(--px-teal);
+  line-height: 2;
+}
+
+.locationDesc {
+  font-size: 6px;
+  color: var(--px-muted);
+  line-height: 2.4;
+}
+
+/* divider */
+.divider {
+  text-align: center;
+  color: var(--px-hint);
+  font-size: 8px;
+  margin: 40px 0;
+  letter-spacing: 8px;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────── */
+.footer {
+  background: var(--px-surface);
+  border-top: var(--px-gap);
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerText {
+  font-size: 6px;
+  color: var(--px-muted);
+}

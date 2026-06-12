@@ -1,0 +1,38 @@
+.ticker {
+  background: #0d0d00;
+  border-top: 2px solid var(--px-gold2);
+  border-bottom: var(--px-gap);
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 7px;
+  flex-shrink: 0;
+}
+
+.name  { color: var(--px-gold); }
+.price { color: var(--px-text); }
+.up    { color: var(--px-green); }
+.down  { color: var(--px-red); }
+.sep   { color: var(--px-border2); user-select: none; }
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background: var(--px-green);
+  display: inline-block;
+  animation: blink 1.2s step-start infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}

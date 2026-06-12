@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* ─── CSS Variables ───────────────────────────────────────────────────────── */
+:root {
+  --px-bg:        #0a0a0f;
+  --px-surface:   #13131a;
+  --px-surface2:  #1c1c28;
+  --px-border:    #2a2a3d;
+  --px-border2:   #3a3a52;
+
+  --px-gold:      #f0c040;
+  --px-gold2:     #c8962a;
+  --px-gold-dim:  #1a1200;
+  --px-green:     #4caf50;
+  --px-green-dim: #001a00;
+  --px-red:       #e05555;
+  --px-purple:    #9b6dff;
+  --px-purple-dim:#0e0020;
+  --px-teal:      #3ecfb2;
+  --px-teal-dim:  #001a18;
+  --px-silver:    #b0a8c0;
+  --px-bronze:    #cd7f32;
+
+  --px-text:      #e8e0d0;
+  --px-muted:     #7a7090;
+  --px-hint:      #4a4560;
+
+  --font-pixel:   'Press Start 2P', monospace;
+
+  /* spacing */
+  --px-gap:       2px solid var(--px-border);
+  --px-gap2:      2px solid var(--px-border2);
+}
+
+/* ─── Reset ────────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: var(--px-bg);
+  color: var(--px-text);
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  line-height: 1.8;
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--px-surface); }
+::-webkit-scrollbar-thumb { background: var(--px-border2); }
+::-webkit-scrollbar-thumb:hover { background: var(--px-muted); }
+
+/* ─── Selection ─────────────────────────────────────────────────────────────── */
+::selection { background: var(--px-gold); color: #000; }
+
+/* ─── Links ─────────────────────────────────────────────────────────────────── */
+a { color: var(--px-teal); text-decoration: none; }
+a:hover { color: var(--px-gold); }
+
+/* ─── Buttons base ───────────────────────────────────────────────────────────── */
+button {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  cursor: pointer;
+  image-rendering: pixelated;
+  transition: background 0.1s, color 0.1s;
+}
+
+/* ─── Utility classes ────────────────────────────────────────────────────────── */
+.px-gold   { color: var(--px-gold); }
+.px-green  { color: var(--px-green); }
+.px-red    { color: var(--px-red); }
+.px-purple { color: var(--px-purple); }
+.px-teal   { color: var(--px-teal); }
+.px-silver { color: var(--px-silver); }
+.px-bronze { color: var(--px-bronze); }
+.px-muted  { color: var(--px-muted); }
