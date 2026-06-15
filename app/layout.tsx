@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'Dux Farm — P2E Medieval RPG on Ethereum',
-  description: 'Farm. Craft. Earn. Own. A pixel RPG on Ethereum.',
+  title: 'Dux Farm — P2E Medieval RPG on Solana',
+  description: 'Farm. Craft. Earn. Own. A pixel RPG on Solana.',
   icons: { icon: '/favicon.ico' },
 }
 

@@ -30,7 +30,7 @@ export default async function HomePage() {
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className={styles.hero}>
         <div className={styles.heroLeft}>
-          <div className={styles.heroEyebrow}>MEDIEVAL P2E RPG ON ETHEREUM</div>
+          <div className={styles.heroEyebrow}>MEDIEVAL P2E RPG ON Solana</div>
           <h1 className={styles.heroTitle}>DUX<br />FARM</h1>
           <div className={styles.heroSubtitle}>FORGE YOUR LEGEND</div>
           <p className={styles.heroDesc}>
@@ -40,7 +40,7 @@ export default async function HomePage() {
             earns you $FARM. Own your destiny on-chain.
           </p>
           <div className={styles.heroTags}>
-            <span className={`${styles.heroTag} ${styles.tagEthereum}`}>Ethereum</span>
+            <span className={`${styles.heroTag} ${styles.tagEthereum}`}>Solana</span>
             <span className={`${styles.heroTag} ${styles.tagP2E}`}>P2E</span>
             <span className={`${styles.heroTag} ${styles.tagPixel}`}>Pixel RPG</span>
             <span className={`${styles.heroTag} ${styles.tagMedieval}`}>Medieval</span>
@@ -119,7 +119,7 @@ export default async function HomePage() {
             <div className={styles.stepIcon}>✨</div>
             <div className={styles.stepTitle}>MINT</div>
             <div className={styles.stepDesc}>
-              Crafted items become NFTs on Ethereum. Each one unique,
+              Crafted items become NFTs on Solana. Each one unique,
               tradeable and permanently yours. Rare recipes = rare NFTs.
             </div>
           </div>
@@ -285,7 +285,7 @@ export default async function HomePage() {
           <div className={styles.tokenTitle}>$FARM TOKEN</div>
           <p className={styles.tokenDesc}>
             The lifeblood of the realm. $FARM is earned through gameplay,
-            spent on crafting, and traded freely on Ethereum DEXs.
+            spent on crafting, and traded freely on Solana DEXs.
             Fixed supply — no inflation, no team minting.
           </p>
           <div className={styles.tokenomicsGrid}>
@@ -324,7 +324,7 @@ export default async function HomePage() {
       </section>
 
       <footer className={styles.footer}>
-        <span className={styles.footerText}>DUX FARM © 2026 — Built on Ethereum</span>
+        <span className={styles.footerText}>DUX FARM © 2026 — Built on Solana</span>
         <span className={styles.footerText} style={{ color: 'var(--px-teal)' }}>$FARM contract: coming soon</span>
       </footer>
     </div>
